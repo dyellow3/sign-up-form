@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Norse-Bold";
+    src: url(fonts/Norse-Bold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Norse-Bold;
+}
+
+body {
+    background: #0a0a0a;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.picture {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;  
+    width: clamp(22rem, 30%, 35%); /* responsive width */
+    background-image: url(./images/chloe-martin-k1tt7uKbQiQ-unsplash.jpg);
+    min-height: 10rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+    width: max(50%, 22rem); /* responsive width */
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 19rem;
+    background-color: white;
+    font-size: 20px;
+    width: 70%;
+    border-radius: 10px;
+    border: solid black;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 9px;
+}
+
+.info, .submission {
+    font-size: 30px;
+    min-height: 250px;
+}
+
+
+.card-heading {
+    color: bisque;
+    background-color: black;
+    font-size: 500%;
+}
