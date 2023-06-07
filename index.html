@@ -12,7 +12,7 @@
 <body>
     <div class="content">
         <div class="picture">
-                <div class="card-heading">ODIN</div>
+            <div class="card-heading">ODIN</div>
         </div>
         <div class="form-container">
             <div class="info">
@@ -22,56 +22,72 @@
             </div>
 
             <form action="get">
-                <div class="input">
-                    <label for="first_name">First Name:</label>
-                    <input type="text" name="first_name" id="first_name">
-                </div>
+                <fieldset class="input-container">
+                    <div class="input">
+                        <label for="first_name">First Name:</label>
+                        <input type="text" minlength="1" name="first_name" id="first_name" required>
+                    </div>
 
 
-                <div class="input">
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" name="last_name" id="last_name">
-                </div>
+                    <div class="input">
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" minlength="1" name="last_name" id="last_name" required>
+                    </div>
 
 
-                <div class="input">
-                    <label for="email">Email:</label>
-                    <input type="text" name="email" id="email">
-                </div>
+                    <div class="input">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
 
 
-                <div class="input">
-                    <label for="phone_number">Phone Number:</label>
-                    <input type="text" name="phone_number" id="phone_number">
-                </div>
+                    <div class="input">
+                        <label for="phone_number">Phone Number:</label>
+                        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: xxx-xxx-xxxx"
+                            name="phone_number" id="phone_number" required>
+                    </div>
 
 
-                <div class="input">
-                    <label for="password">Password:</label>
-                    <input type="text" name="password" id="password">
-                </div>
+                    <div class="input">
+                        <label for="password">Password:</label>
+                        <input type="password" minlength="5" placeholder="Minimum length: 5" name="password" id="password" required>
+                    </div>
 
 
-                <div class="input">
-                    <label for="confirm_password">Confirm Password:</label>
-                    <input type="text" name="confirm_password" id="confirm_password">
-                </div>
+                    <div class="input">
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input type="password" minlength="5" name="confirm_password" id="confirm_password" required>
+                    </div>
+                </fieldset>
+
+
+                <fieldset class="submission">
+                    <button type="submit">Create Account</button>
+
+                    <div class="alreadyHaveAccount">
+                        <div>Already have an account? <a href="index.html">Log in</a></div>
+                    </div>
+                </fieldset>
 
 
             </form>
 
-            <div class="submission">
-                <button type="submit">Create Account</button>
-
-                <div class="alreadyHaveAccount">
-                    <div>Already have an account? Log in</div>
-                </div>
-            </div>
 
         </div>
     </div>
 
+    <script>
+        const password = document.querySelector('#password');
+        const confirmPassword = document.querySelector('#confirm_password');
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            if (password.value !== confirmPassword.value) {
+                event.preventDefault();
+                alert('Password and Confirm Password do not match');
+            }
+        });
+    </script>
+
 </body>
 
 </html>
-
