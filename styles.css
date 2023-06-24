@@ -38,7 +38,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(240, 240, 240);
     width: max(50%, 22rem); /* responsive width */
 }
 
@@ -79,7 +79,7 @@ form {
 input {
     padding: 6px;
     border-radius: 7px;
-    border: solid black 1px;
+    border: solid 1px;
     margin-top: 5%;
 }
  
@@ -106,7 +106,7 @@ input {
 
 
 button {
-    font-size: clamp(1.3rem, 3rem, 1.4vw);
+    font-size: clamp(1.3rem, 1.8rem, 1.13vw);
     width: max(30%, 10rem);
     margin-bottom: 0.4rem;
 }
@@ -122,6 +122,10 @@ fieldset {
 }
 
 
-:invalid {
+input:invalid {
     border-color: red;
+}
+
+input:placeholder-shown, input:focus {
+    border-color: unset;
 }
