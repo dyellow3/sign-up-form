@@ -52,18 +52,15 @@ form, .input-container{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.input-container {
+form {
     background-color: white;
 }
 
 .submission {
-    width: 100%;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 10%;
     min-height: 100px;
-    padding: 15px;
-    margin-top: 5%;
+    padding-left: 15px;
     font-size: clamp(1.3rem, 2rem, 1.3vw);
 }
 
@@ -72,7 +69,9 @@ form, .input-container{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -83,24 +82,33 @@ input {
     border: solid black 1px;
     margin-top: 5%;
 }
-
+ 
 .info, .submission {
     display: flex;
+    margin-left: 10%;
     flex-direction: column;
     justify-content: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
 
+.input-container {
+    padding-top: 20px;
+}
+
 
 .info { 
     font-size: clamp(1.6rem, 3rem, 1.6vw);
-    width: 85%; 
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-right: 10%;
 }
 
 
 button {
-    font-size: clamp(1.3rem, 3rem, 1.6vw);
+    font-size: clamp(1.3rem, 3rem, 1.4vw);
     width: max(30%, 10rem);
     margin-bottom: 0.4rem;
 }
@@ -118,7 +126,4 @@ fieldset {
 
 :invalid {
     border-color: red;
-}
-
-a {
 }
